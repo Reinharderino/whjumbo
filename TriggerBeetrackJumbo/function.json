@@ -13,6 +13,15 @@
       "type": "http",
       "direction": "out",
       "name": "res"
+    },
+     {
+      "type": "cosmosDB",
+      "name": "$return",
+      "databaseName": "WHPOSCON",
+      "collectionName": "reportes",
+      "createIfNotExists": false,
+      "connectionStringSetting": "cosmos-instance_DOCUMENTDB",
+      "direction": "out"
     }
   ]
 }

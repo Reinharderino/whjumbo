@@ -6,6 +6,8 @@ module.exports = async function (context, req) {
             // status: 200, /* Defaults to 200 */
             body: "Hello " + (req.query.data || req.body.data)
         };
+        context.reportes = (req.query.data || req.body.data);
+        context.done;
     }
     else {
         context.res = {
