@@ -1,10 +1,10 @@
 module.exports = async function (context, req) {
-    context.log('JavaScript HTTP trigger function processed a request.');
+    context.log('Se ha gatillado la función');
 
     if (req.query.data || (req.body && req.body.data)) {
         context.res = {
             // status: 200, /* Defaults to 200 */
-            body: "Hello " + (req.query.data || req.body.data)
+            body: "Info Recibida " + (req.query.data || req.body.data)
         };
         context.reportes = (req.query.data || req.body.data);
         context.done;
@@ -12,7 +12,7 @@ module.exports = async function (context, req) {
     else {
         context.res = {
             status: 400,
-            body: "Please pass a name on the query string or in the request body"
+            body: "Por favor envía un parametro 'data' ó 'data' en el body del request con la información."
         };
     }
 };
